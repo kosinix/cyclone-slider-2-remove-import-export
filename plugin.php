@@ -10,14 +10,14 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
 // Hook this before the plugin loads
-add_action( 'plugins_loaded', 'cyclone_slider_remove_import_export_init', 9 );
-function cyclone_slider_remove_import_export_init() {
+add_action( 'plugins_loaded', 'cycloneslider_remove_import_export_init', 9 );
+function cycloneslider_remove_import_export_init() {
 
 	// Add the filter
-	add_filter( 'cyclone_slider_services', 'cyclone_slider_remove_import_export_override_services' );
+	add_filter( 'cycloneslider_services', 'cycloneslider_remove_import_export_override_services' );
 }
 
-function cyclone_slider_remove_import_export_override_services( $services ) {
+function cycloneslider_remove_import_export_override_services( $services ) {
 
 	// Unset services
 	unset(
